@@ -5,6 +5,13 @@
     border-radius: $radius;
 }
 
+@mixin transition($property, $duration, $timing:null, $delay:null) {
+  -webkit-transition: $property $duration $timing $delay;
+  -moz-transition: $property $duration $timing $delay;
+  -o-transition: $property $duration $timing $delay;
+  transition: $property $duration $timing $delay;
+}
+
 @mixin noselect() {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -12,6 +19,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+html, body {
+    background: #fff;
 }
 
 #mobile-navigation-toggle {
@@ -30,5 +41,22 @@
     cursor: pointer;
     .hidden {
         display: none;
+    }
+}
+
+#mobile-navigation-container {
+    overflow: hidden;
+    position: fixed;
+    z-index: 249;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #f3f5f4;
+    @include transition(width, .3s, ease-in-out, 0s);
+    &.open {
+        width: 100%;
+        @include transition(width, .3s, ease-in-out, 0s);
     }
 }

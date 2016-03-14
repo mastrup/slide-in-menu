@@ -3980,7 +3980,11 @@ a.menu-block:hover {
       .footer a:not(.icon):hover {
         border-bottom-color: #1fc8db; }
 
-/* line 17, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
+/* line 24, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
+html, body {
+  background: #fff; }
+
+/* line 28, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
 #mobile-navigation-toggle {
   position: fixed;
   z-index: 250;
@@ -4002,8 +4006,31 @@ a.menu-block:hover {
   text-align: center;
   color: #fff;
   cursor: pointer; }
-  /* line 31, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
+  /* line 42, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
   #mobile-navigation-toggle .hidden {
     display: none; }
+
+/* line 47, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
+#mobile-navigation-container {
+  overflow: hidden;
+  position: fixed;
+  z-index: 249;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #f3f5f4;
+  -webkit-transition: width 0.3s ease-in-out 0s;
+  -moz-transition: width 0.3s ease-in-out 0s;
+  -o-transition: width 0.3s ease-in-out 0s;
+  transition: width 0.3s ease-in-out 0s; }
+  /* line 58, /Users/Mastrup/Documents/GitHub/slide-in-menu/css/styles.scss */
+  #mobile-navigation-container.open {
+    width: 100%;
+    -webkit-transition: width 0.3s ease-in-out 0s;
+    -moz-transition: width 0.3s ease-in-out 0s;
+    -o-transition: width 0.3s ease-in-out 0s;
+    transition: width 0.3s ease-in-out 0s; }
 
 /*# sourceMappingURL=styles.css.map */
