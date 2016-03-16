@@ -60,6 +60,8 @@ html, body {
     &.open {
 		left: 0;
         @include transition(left, .3s, ease-in-out, 0s);
+        width: 100%;
+        overflow-y: scroll;
     }
 	.mobile-navigation-header {
 		margin-bottom: 15px;
