@@ -49,14 +49,37 @@ html, body {
     position: fixed;
     z-index: 249;
     display: block;
-    left: 0;
+    left: -100%;
     top: 0;
     height: 100%;
-    width: 0;
+    width: 100%;
     background: #f3f5f4;
-    @include transition(width, .3s, ease-in-out, 0s);
+    @include transition(left, .3s, ease-in-out, 0s);
+	padding: 15px 20px;
+	font-size: 18px;
     &.open {
-        width: 100%;
-        @include transition(width, .3s, ease-in-out, 0s);
+		left: 0;
+        @include transition(left, .3s, ease-in-out, 0s);
     }
+	.mobile-navigation-header {
+		margin-bottom: 15px;
+		.mobile-navigation-back {
+			color: #003f63;
+			font-size: 16px;
+		}
+	}
+	ul {
+		li {
+			border-bottom: 1px solid rgba(231, 229, 224, 0.8);
+			a {
+				padding: 15px 0;
+				display: inline-block;
+			}
+			.goto-submenu {
+				display: block;
+				float: right;
+				padding: 15px 0 15px 30px;
+			}
+		}
+	}
 }
