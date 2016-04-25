@@ -30,7 +30,7 @@ $(function () {
 		element.addClass("active active-layer");
 		element.parents(".submenu").addClass("active");
 		if(element.length){
-			checkIfRoot(element);
+			checkIfRoot($("a[data-id='" + currentId + "']"));
 		}
 	}
 	
